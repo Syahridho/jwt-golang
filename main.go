@@ -20,6 +20,8 @@ func main() {
   	router.POST("/signup", controllers.Signup)
   	router.POST("/login", controllers.Login)
   	router.GET("/validate", middleware.RequireAuth, controllers.Validate)
+	router.POST("/forgot-password", controllers.ForgotPassword)
+	router.POST("/reset-password", controllers.ResetPassword)
 
 	router.Run()
 }
